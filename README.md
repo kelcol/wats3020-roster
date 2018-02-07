@@ -12,21 +12,20 @@ extend Class objects, and how to make use of Class methods within your code.
 
 In order to successfully complete this project, you must:
 
-* Complete all of the TODO requirements in the `js/main.js` file.
-* Create the needed Classes to fill in functionality on the roster: `Person`, `Student`, and `Teacher`.
-* Create the needed methods on the `Student` Class to handle calculating attendance.
-* Create the needed methods on the `Course` Class to handle roster management.
-* Provide helpful comments throughout your code (and remove the TODO comments when done).
-* Write stylistically consistent, syntactically corrent JS.
+[X] Create the needed Classes to fill in functionality on the roster: `Person`, `Student`, and `Teacher`.
+[X] Create the needed methods on the `Student` Class to handle calculating attendance.
+[X] Create the needed methods on the `Course` Class to handle roster management.
+[/] Provide helpful comments throughout your code (and remove the TODO comments when done).
+[/] Write stylistically consistent, syntactically correct JS.
 
 ## Stretch Goals
 
 If you are able to easily fulfill the requirements above, try completing these
 stretch goals.
 
-* Add a way to remove a Teacher from the course (put a `removeTeacher()` method on the `Course` class).
-* Add a way to remove a Student from the course.
-* Create `markPresent()` and `markAbsent()` methods on the `Student` Class and use those from within the `Course` Class' `markAttendance()` method.
-* Build better error-checking in the `Person` constructor to make sure people have put in an email address with an `@` symbol.
-* Enhance the display of attendance information to show the number of present and absent days.
-* **ADVANCED:** Instead of using `prompt()` commands, use an HTML form(s) to collect information from the user.
+[] Add a way to remove a Teacher from the course (put a `removeTeacher()` method on the `Course` class).
+[] Add a way to remove a Student from the course.
+[] Create `markPresent()` and `markAbsent()` methods on the `Student` Class and use those from within the `Course` Class' `markAttendance()` method.
+[] Build better error-checking in the `Person` constructor to make sure people have put in an email address with an `@` symbol.
+[] Enhance the display of attendance information to show the number of present and absent days.
+[] **ADVANCED:*[] Instead of using `prompt()` commands, use an HTML form(s) to collect information from the user.
