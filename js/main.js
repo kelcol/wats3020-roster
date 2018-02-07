@@ -5,8 +5,16 @@ class Person {
         this.name = name;
         this.email = email;
         // split on @ and assign var to first item in array
-        this.username = email.split('@')[0];
+        this.username = makeUnique(email.split('@')[0]);
     }
+}
+
+// Reduce likelihood of duplicate usernames for attendance marking
+function makeUnique(username) {
+  let possible = "0123456789";
+  for (i = 0; i < 3; i++)
+    username += possible.charAt(Math.floor(Math.random() * possible.length));
+  return username;
 }
 
 // Extend person class into studenthood
@@ -68,6 +76,14 @@ class Course {
         // Use updateRoster function to add teacher's info to table
         updateRoster(this);
     }
+	// "Unset" the teacher -- there's maybe a better way to do this?
+	removeTeacher() {
+		let name = "";
+		let email = "";
+		let honorific = "";
+		this.teacher = new Teacher(name, email, honorific);
+		updateRoster(this);
+	}
 
     // Assign username to var student to serve as id for marking purposes
     markAttendance(username, status = "present") {
@@ -145,10 +161,17 @@ addStudentButton.addEventListener('click', function(e) {
 })
 
 // Create event listener for adding a teacher.
+// Create event listener for adding a teacher.
 let addTeacherButton = document.querySelector('#add-teacher');
 addTeacherButton.addEventListener('click', function(e) {
     console.log('Calling setTeacher() method.');
     myCourse.setTeacher();
+})
+
+let removeTeacherButton = document.querySelector('#remove-teacher');
+removeTeacherButton.addEventListener('click', function(e) {
+    console.log('Calling removeTeacher() method.');
+    myCourse.removeTeacher();
 })
 
 // Call Update Roster to initialize the content of the page.
