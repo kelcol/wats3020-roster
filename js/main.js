@@ -255,7 +255,7 @@ function updateRoster(course) {
 //     for (button of removeStudentButtons) {
 //         button.addEventListener('click', function(e) {
 //             console.log(`Removing $e.target.dataset.username} from class.`);
-//             myCourse.
+//             updateRoster(myCourse);
 //         })
 //     }
 // }
