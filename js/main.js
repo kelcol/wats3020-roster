@@ -97,19 +97,6 @@ class Course {
         // update display table with what updateRoster returns for "this"
         updateRoster(this);
     }
-    // REMSTU
-    // removeStudent(username, status = "remove-student") {
-    // 	let student = this.findStudent(username);
-    // 	if status === "remove-student") {
-    // 	students = students.filter(function(item) {
-    // 		return item !== student
-    // 	})
-    // 	}
-    //     this.students.pop(student);
-    //     // Use updateRoster function to remove student info from table
-    //     updateRoster(this);
-    // }
-
 
     //////////////////////////////////////////////
     // Methods provided for you -- DO NOT EDIT /////////////////////////////////
@@ -231,13 +218,6 @@ function updateRoster(course) {
         absentButton.setAttribute('class', 'absent');
         actionsTD.appendChild(absentButton);
 
-        // REMSTU
-        // let removeStudentButton = document.createElement('button');
-        // removeStudentButton.innerHTML = "Remove From Course";
-        // removeStudentButton.setAttribute('data-username', student.username);
-        // removeStudentButton.setAttribute('class', 'remove-student');
-        // actionsTD.appendChild(removeStudentButton);
-
         newTR.appendChild(actionsTD);
 
         // Append the new row to the roster table.
@@ -246,19 +226,6 @@ function updateRoster(course) {
     // Call function to set event listeners on attendance buttons.
     setupAttendanceButtons();
 }
-
-
-// REMSTU
-// function setUpStudentRemovalButtons() {
-//     // Set up event listeners for buttons to mark removal
-//     let removeStudentButtons = document.querySelectorAll('.remove-student');
-//     for (button of removeStudentButtons) {
-//         button.addEventListener('click', function(e) {
-//             console.log(`Removing $e.target.dataset.username} from class.`);
-//             updateRoster(myCourse);
-//         })
-//     }
-// }
 
 function setupAttendanceButtons() {
     // Set up the event listeners for buttons to mark attendance.
