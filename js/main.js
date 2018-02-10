@@ -36,7 +36,17 @@ class Student extends Person {
         } else {
             return "0%";
         }
-    }
+	}
+	markPresent(username, status = "present") {
+		let student = this.findStudent(username);
+		student.attendance.push(1);
+		updateRoster(this);
+	}
+	markAbsent(username, status = "absent") {
+		let student = this.findStudent(username);
+		student.attendance.push(0);
+		updateRoster(this);
+	}
 }
 
 // Extend person class into teacherhood
@@ -84,19 +94,19 @@ class Course {
         this.teacher = new Teacher(name, email, honorific);
         updateRoster(this);
     }
-
+	// Leaving this here for reference
     // Assign username to var student to serve as id for marking purposes
-    markAttendance(username, status = "present") {
-        let student = this.findStudent(username);
-        // add 1 or 0 to array depending on if status is "present"
-        if (status === "present") {
-            student.attendance.push(1);
-        } else {
-            student.attendance.push(0);
-        }
-        // update display table with what updateRoster returns for "this"
-        updateRoster(this);
-    }
+    // markAttendance(username, status = "present") {
+    //     let student = this.findStudent(username);
+    //     // add 1 or 0 to array depending on if status is "present"
+    //     if (status === "present") {
+    //         student.attendance.push(1);
+    //     } else {
+    //         student.attendance.push(0);
+    //     }
+    //     // update display table with what updateRoster returns for "this"
+    //     updateRoster(this);
+    // }
 
     //////////////////////////////////////////////
     // Methods provided for you -- DO NOT EDIT /////////////////////////////////
@@ -233,7 +243,7 @@ function setupAttendanceButtons() {
     for (button of presentButtons) {
         button.addEventListener('click', function(e) {
             console.log(`Marking ${e.target.dataset.username} present.`);
-            myCourse.markAttendance(e.target.dataset.username);
+            Student.markPresent(e.target.dataset.username);
             updateRoster(myCourse);
         });
     }
@@ -241,7 +251,7 @@ function setupAttendanceButtons() {
     for (button of absentButtons) {
         button.addEventListener('click', function(e) {
             console.log(`Marking ${e.target.dataset.username} absent.`);
-            myCourse.markAttendance(e.target.dataset.username, 'absent');
+            Student.markAbsent(e.target.dataset.username, 'absent');
             updateRoster(myCourse);
         });
     }
