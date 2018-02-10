@@ -23,9 +23,9 @@ In order to successfully complete this project, you must:
 If you are able to easily fulfill the requirements above, try completing these
 stretch goals.
 
-[] Add a way to remove a Teacher from the course (put a `removeTeacher()` method on the `Course` class).    
-[] Add a way to remove a Student from the course.   
-[] Create `markPresent()` and `markAbsent()` methods on the `Student` Class and use those from within the `Course` Class' `markAttendance()` method.    
+[X'a] Add a way to remove a Teacher from the course (put a `removeTeacher()` method on the `Course` class).    
+[/] Add a way to remove a Student from the course.   
+[/] Create `markPresent()` and `markAbsent()` methods on the `Student` Class and use those from within the `Course` Class' `markAttendance()` method.    
 [] Build better error-checking in the `Person` constructor to make sure people have put in an email address with an `@` symbol.    
 [] Enhance the display of attendance information to show the number of present and absent days.    
 [] **ADVANCED:*[] Instead of using `prompt()` commands, use an HTML form(s) to collect information from the user.    
