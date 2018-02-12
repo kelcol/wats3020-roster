@@ -15,8 +15,8 @@ In order to successfully complete this project, you must:
 [X] Create the needed Classes to fill in functionality on the roster: `Person`, `Student`, and `Teacher`.    
 [X] Create the needed methods on the `Student` Class to handle calculating attendance.    
 [X] Create the needed methods on the `Course` Class to handle roster management.    
-[/] Provide helpful comments throughout your code (and remove the TODO comments when done).    
-[/] Write stylistically consistent, syntactically correct JS.    
+[X] Provide helpful comments throughout your code (and remove the TODO comments when done).    
+[X] Write stylistically consistent, syntactically correct JS.    
 
 ## Stretch Goals
 
