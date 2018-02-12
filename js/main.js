@@ -59,8 +59,8 @@ class Course {
 
     // Collect data for a student and add their object to the students array
     addStudent() {
-        let name = prompt("Name: ", "R.U. Kidding");
-        let email = prompt("Email", "ralphie@kidding.com");
+        let name = prompt("Name: ");
+        let email = prompt("Email: ");
         let newStudent = new Student(name, email);
         this.students.push(newStudent);
         // Use updateRoster function to add student's info to table
@@ -69,14 +69,14 @@ class Course {
 
     // Collect data for the teacher and use updateRoster function to add course attributes
     setTeacher() {
-        let name = prompt("Name: ", "N.A. Southfoot");
-        let email = prompt("Email", "alfie@southfoot.com");
-        let honorific = prompt("Honorific (Mr., Mrs., Ms., Dr., etc.): ", "Imperator");
-        this.teacher = new Teacher(name, email, honorific);
-        // Use updateRoster function to add teacher's info to table
-        updateRoster(this);
-    }
-    // "Unset" the teacher -- there's maybe a better way to do this?
+            let name = prompt("Name: ");
+            let email = prompt("Email: ");
+            let honorific = prompt("Honorific (Mr., Mrs., Ms., Dr., etc.): ");
+            this.teacher = new Teacher(name, email, honorific);
+            // Use updateRoster function to add teacher's info to table
+            updateRoster(this);
+        }
+        // "Unset" the teacher -- there's maybe a better way to do this?
     removeTeacher() {
         let name = "";
         let email = "";
@@ -115,13 +115,13 @@ class Course {
 
 
 // Prompt the user for the `courseCode` (the number/code of the course, like "WATS 3000").
-let courseCode = prompt("Course Code: ", "CS 101");
+let courseCode = prompt("Course Code: ");
 
 // Prompt the user for the `courseTitle` (the name of the course, like "Introduction to JavaScript").
-let courseTitle = prompt("Course Title: ", "How to Swing A Cat");
+let courseTitle = prompt("Course Title: ");
 
 // Prompt the user for the  `courseDescription` (the descriptive summary of the course).
-let courseDescription = prompt("Course Description: ", "An introductory course on the art of cat swinging with some coverage of cat swinging in narrow spaces");
+let courseDescription = prompt("Course Description: ");
 
 // Instantiate a new Course object with information supplied by the user above
 let myCourse = new Course(courseCode, courseTitle, courseDescription);
